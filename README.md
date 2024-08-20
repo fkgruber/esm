@@ -2,6 +2,8 @@
 
 [![atlas](https://user-images.githubusercontent.com/3605224/199301187-a9e38b3f-71a7-44be-94f4-db0d66143c53.png)](https://esmatlas.com)
 
+***Update August 2024:*** Added a new requirement to environment.yml so it installs the correct version of MKL to avoid error in torch.
+
 ***Update April 2023:*** Code for the two simultaneous preprints on protein design is now released! Code for "Language models generalize beyond natural proteins" is under [examples/lm-design/](examples/lm-design/). Code for "A high-level programming language for generative protein design" is under [examples/protein-programming-language/](examples/protein-programming-language/).
 
 This repository contains code and pre-trained weights for **Transformer protein language models** from the Meta Fundamental AI Research Protein Team (FAIR), including our state-of-the-art [**ESM-2** and **ESMFold**](#esmfold), as well as [**MSA Transformer**](https://www.biorxiv.org/content/10.1101/2021.02.12.430858v1), [**ESM-1v**](#zs_variant) for predicting variant effects and [**ESM-IF1**](#invf) for inverse folding.
@@ -116,7 +118,7 @@ For a complete list of available models, with details and release notes, see [Pr
 An easy way to get started is to load ESM or ESMFold through the [HuggingFace transformers library](https://huggingface.co/docs/transformers/model_doc/esm),
 which has simplified the ESMFold dependencies and provides a standardized API and tools to work with state-of-the-art pretrained models.
 
-Alternatively, [ColabFold](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/ESMFold.ipynb) has integrated ESMFold so that you can 
+Alternatively, [ColabFold](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/ESMFold.ipynb) has integrated ESMFold so that you can
 easily run it directly in the browser on a Google Colab instance.
 
 We also provide an API which you can access through curl or on [the ESM Metagenomic Atlas web page](https://esmatlas.com/resources?action=fold).
@@ -410,7 +412,7 @@ see our [blog post](https://ai.facebook.com/blog/protein-folding-esmfold-metagen
 Bulk download instructions available at a seperate README [here](scripts/atlas/README.md).
 
 The Atlas resources include a page to [fold a sequence using ESMFold](https://esmatlas.com/resources?action=fold),
-searching a subset of the ESM Atlas by [structure](https://esmatlas.com/resources?action=search_structure) or 
+searching a subset of the ESM Atlas by [structure](https://esmatlas.com/resources?action=search_structure) or
 [sequence](https://esmatlas.com/resources?action=search_sequence),
 as well as an [API](https://esmatlas.com/about#api) to access those resources programmatically.
 
